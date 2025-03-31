@@ -55,4 +55,60 @@ A modern web application for visualizing and managing Kubernetes Custom Resource
    node --version
    
    # If you need to install or update Node.js, visit https://nodejs.org/
+   ```
+
+2. **Package Manager**: This project uses pnpm
+   ```bash
+   # Install pnpm if you haven't already
+   npm install -g pnpm
+   ```
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/crd-visualize.git
+   cd crd-visualize
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+### Configuration
+
+The application can be configured through environment variables or the configuration file:
+
+1. Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_API_URL=your_api_url
+   ```
+
+### Basic Usage
+
+1. **Connect to a Cluster**:
+   - Use the cluster selector in the top navigation to choose your Kubernetes cluster
+   - Or use mock mode for testing without a live cluster
+
+2. **Browse CRDs**:
+   - Navigate to the CRD browser to see all available Custom Resource Definitions
+   - Use the search functionality to filter CRDs
+   - Click on any CRD to view its details and relationships
+
+3. **Visualize Relationships**:
+   - Switch to the Graph View to see CRD relationships
+   - Drag nodes to rearrange the visualization
+   - Zoom in/out to focus on specific areas
+
+4. **Export Resources**:
+   - Select resources you want to export
+   - Click the Download button to get YAML files
 
